@@ -6,6 +6,10 @@ extern Land::Application* Land::CreateApplication();
 
 int main(int argc, char** argv)
 {
+	Land::Log::Init();
+	LA_CORE_WARN("Initialized log!");
+	LA_INFO("Hello");
+
 	auto app = Land::CreateApplication();
 	app->Run();
 	delete app;

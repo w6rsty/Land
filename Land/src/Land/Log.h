@@ -34,16 +34,3 @@ namespace Land {
 #define LA_TRACE(...)			::Land::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define LA_FATAL(...)			::Land::Log::GetClientLogger()->fatal(__VA_ARGS__)
 
-#ifdef LA_RELEASE
-	#define LA_CORE_ERROR
-	#define LA_CORE_WARN
-	#define LA_CORE_INFO
-	#define LA_CORE_TRACE
-	#define LA_CORE_FATAL
-
-	#define LA_ERROR	
-	#define LA_WARN		
-	#define LA_INFO
-	#define LA_TRACE	
-	#define LA_FATAL	
-#endif
