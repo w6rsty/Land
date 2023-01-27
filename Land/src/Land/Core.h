@@ -9,3 +9,5 @@
 #else
 	#error Land only supports Windows!
 #endif // !LA_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

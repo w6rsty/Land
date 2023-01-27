@@ -4,6 +4,9 @@
     <Filter Include="Land">
       <UniqueIdentifier>{8467887C-709E-890D-198B-6F1005A1050F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Land\Events">
+      <UniqueIdentifier>{E8F6952D-54AC-0E23-DDA0-08FA49550527}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Land.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Land\EntryPoint.h">
       <Filter>Land</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Land\Events\ApplicationEvent.h">
+      <Filter>Land\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Land\Events\Event.h">
+      <Filter>Land\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Land\Events\KeyEvent.h">
+      <Filter>Land\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Land\Events\MouseEvent.h">
+      <Filter>Land\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Land\Log.h">
       <Filter>Land</Filter>
