@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Land
 {
 	class LAND_API WindowResizeEvent : public Event

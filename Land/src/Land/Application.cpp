@@ -1,9 +1,12 @@
+#include "lapch.h"
 #include "Application.h"
 
-#include "Log.h"
 #include "Events/ApplicationEvent.h"
+#include "Land/Log.h"
 
-namespace Land {
+namespace Land 
+{
+
 	Application::Application()
 	{
 	}
@@ -14,9 +17,6 @@ namespace Land {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1920, 1080);
-		LA_TRACE(e);
-
 		while (true);
 	}
 }

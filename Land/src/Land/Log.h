@@ -1,7 +1,5 @@
 #pragma once
 
-#include <memory>
-
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
@@ -27,7 +25,6 @@ namespace Land {
 #define LA_CORE_INFO(...)		::Land::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define LA_CORE_TRACE(...)		::Land::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define LA_CORE_FATAL(...)		::Land::Log::GetCoreLogger()->fatal(__VA_ARGS__)
-
 // Client log macros
 #define LA_ERROR(...)			::Land::Log::GetClientLogger()->error(__VA_ARGS__)
 #define LA_WARN(...)			::Land::Log::GetClientLogger()->warn(__VA_ARGS__)

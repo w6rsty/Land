@@ -1,9 +1,7 @@
 #pragma once
 
+#include "lapch.h"
 #include "Land/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Land
 {

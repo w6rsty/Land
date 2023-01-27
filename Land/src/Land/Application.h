@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
-namespace Land {
+namespace Land 
+{
 	class LAND_API Application
 	{
 	public:

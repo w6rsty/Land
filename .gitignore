@@ -2,7 +2,7 @@
 .vs/
 bin/
 bin-int/
-Land/vendor/
+
 
 # files
 *.user

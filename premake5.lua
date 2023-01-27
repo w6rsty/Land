@@ -10,6 +10,12 @@ workspace "Land"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Land/vendor/GLFW/include"
+
+include "Land/vendor/GLFW"
+
 project "Land"
 	location "Land"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Land"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "lapch.h" 
+	pchsource "Land/src/lapch.cpp"
 
 	files
 	{
@@ -27,7 +36,14 @@ project "Land"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
