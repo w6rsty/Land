@@ -28,7 +28,7 @@ namespace Land
 
 		LA_CORE_INFO("Creating Window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 		
-		if (s_GLFWInitialized)
+		if (!s_GLFWInitialized)
 		{
 			int success = glfwInit();
 			LA_CORE_ASSERT(success, "Could not initialie GLFW!");
@@ -40,6 +40,11 @@ namespace Land
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+	}
+
+	void WindowsWindow::Shutdown()
+	{
+		glfwDestroyWindow(m_Window);
 	}
 
 	void WindowsWindow::OnUpdate()
@@ -63,8 +68,5 @@ namespace Land
 		return m_Data.VSync;
 	}
 
-	void WindowsWindow::Shutdown()
-	{
-		glfwDestroyWindow(m_Window);
-	}
+	
 }
