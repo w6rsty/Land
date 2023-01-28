@@ -43,6 +43,9 @@
     <ClInclude Include="src\Land\Window.h">
       <Filter>Land</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\lapch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Land\Log.cpp">
       <Filter>Land</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\lapch.cpp" />
   </ItemGroup>

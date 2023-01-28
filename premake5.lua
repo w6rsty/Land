@@ -24,7 +24,7 @@ project "Land"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "lapch.h" 
+	pchheader "lapch.h"
 	pchsource "Land/src/lapch.cpp"
 
 	files

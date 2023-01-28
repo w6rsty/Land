@@ -90,8 +90,9 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Debug-windows-x86_64\Land\Land.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>E:\code\openGL\Land\Land\vendor\GLFW\bin\Debug-windows-x86_64\GLFW</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Land\Land.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Land\Land.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Land\Land.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
@@ -117,8 +118,9 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Release-windows-x86_64\Land\Land.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>E:\code\openGL\Land\Land\vendor\GLFW\bin\Debug-windows-x86_64\GLFW</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\Land\Land.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Land\Land.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Land\Land.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
@@ -144,8 +146,9 @@
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>GLFW.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>..\bin\Dist-windows-x86_64\Land\Land.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>E:\code\openGL\Land\Land\vendor\GLFW\bin\Debug-windows-x86_64\GLFW</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Dist-windows-x86_64\Land\Land.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Land\Land.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Land\Land.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
@@ -162,11 +165,13 @@
     <ClInclude Include="src\Land\Events\MouseEvent.h" />
     <ClInclude Include="src\Land\Log.h" />
     <ClInclude Include="src\Land\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\lapch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Land\Application.cpp" />
     <ClCompile Include="src\Land\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\lapch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
