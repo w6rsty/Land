@@ -7,7 +7,6 @@
 
 namespace Land
 {
-
 	class LAND_API LayerStack
 	{
 	public:

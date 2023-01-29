@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Land/vendor/GLFW/include"
+IncludeDir["Glad"] = "Land/vendor/Glad/include"
+IncludeDir["ImGui"] = "Land/vendor/imgui"
 
 include "Land/vendor/GLFW"
+include "Land/vendor/Glad"
+include "Land/vendor/imgui"
 
 project "Land"
 	location "Land"
@@ -37,12 +41,16 @@ project "Land"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -54,7 +62,8 @@ project "Land"
 		defines
 		{
 			"LA_PLATFORM_WINDOWS",
-			"LA_BUILD_DLL"
+			"LA_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -64,14 +73,17 @@ project "Land"
 
 	filter "configurations:Debug"
 		defines "LA_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "LA_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "LA_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -111,12 +123,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "LA_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "LA_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "LA_DIST"
+		buildoptions "/MD"
 		optimize "On"

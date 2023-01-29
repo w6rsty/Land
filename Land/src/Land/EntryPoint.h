@@ -9,6 +9,7 @@ int main(int argc, char** argv)
 	Land::Log::Init();
 	LA_CORE_WARN("Initialized log!");
 
+
 	auto app = Land::CreateApplication();
 	app->Run();
 	delete app;
