@@ -37,6 +37,12 @@
     <ClInclude Include="src\Land\Events\MouseEvent.h">
       <Filter>Land\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Land\Layer.h">
+      <Filter>Land</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Land\LayerStack.h">
+      <Filter>Land</Filter>
+    </ClInclude>
     <ClInclude Include="src\Land\Log.h">
       <Filter>Land</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Land\Application.cpp">
+      <Filter>Land</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Land\Layer.cpp">
+      <Filter>Land</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Land\LayerStack.cpp">
       <Filter>Land</Filter>
     </ClCompile>
     <ClCompile Include="src\Land\Log.cpp">
